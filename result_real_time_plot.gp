@@ -12,7 +12,9 @@ plot [:][:] \
     'result_real_time_plot.csv' using 1:6 smooth csplines title 'OpenMP 4 threads', \
     'result_real_time_plot.csv' using 1:8 smooth csplines title 'AVX', \
     'result_real_time_plot.csv' using 1:10 smooth csplines title 'AVX + Loop unrolling', \
-    'result_real_time_plot.csv' using 1:12 smooth csplines title 'Leibniz'
+    'result_real_time_plot.csv' using 1:12 smooth csplines title 'Leibniz', \
+    'result_real_time_plot.csv' using 1:14 smooth csplines title 'Leibniz + OpenMP with 2 threads', \
+    'result_real_time_plot.csv' using 1:16 smooth csplines title 'Leibniz + OpenMP with 4 threads'
 
 set title "Error Rate"
 set xlabel "N"
@@ -28,4 +30,6 @@ plot [:][:] \
     'result_real_time_plot.csv' using 1:7 smooth csplines lw 2 title 'OpenMP 4 threads', \
     'result_real_time_plot.csv' using 1:9 smooth csplines lw 2 title 'AVX', \
     'result_real_time_plot.csv' using 1:11 smooth csplines lw 2 title 'AVX + Loop unrolling', \
-    'result_real_time_plot.csv' using 1:13 smooth csplines lw 2 title 'Leibniz'
+    'result_real_time_plot.csv' using 1:13 smooth csplines lw 2 title 'Leibniz', \
+    'result_real_time_plot.csv' using 1:15 smooth csplines lw 2 title 'Leibniz + OpenMP with 2 threads', \
+    'result_real_time_plot.csv' using 1:17 smooth csplines lw 2 title 'Leibniz + OpenMP with 4 threads'

@@ -29,6 +29,14 @@ int main(int argc, char const *argv[])
 #if defined(LEIBNIZ)
     pi = compute_pi_leibniz(N);
 #endif
+
+#if defined(LEIBNIZ_OPENMP_2)
+    pi = compute_pi_leibniz_openmp(N, 2);
+#endif
+
+#if defined(LEIBNIZ_OPENMP_4)
+    pi = compute_pi_leibniz_openmp(N, 4);
+#endif
     printf("N = %d , pi = %lf\n", N, pi);
 
     return 0;

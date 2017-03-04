@@ -129,3 +129,19 @@ double compute_pi_leibniz(size_t N)
 
     return pi * 4.0;
 }
+
+double compute_pi_leibniz_openmp(size_t N, int threads)
+{
+    double pi = 0.0;
+    double tmp = -1.0;
+    #pragma omp parallel num_threads(threads)
+    {
+        #pragma omp for private(tmp) reduction(+:pi)
+        for (size_t i = 0; i < N; i++) {
+            tmp = (i % 2)? -1.0 : 1.0;
+            pi += tmp / ( 2.0 * (double)i + 1.0);
+        }
+    }
+
+    return pi * 4.0;
+}
