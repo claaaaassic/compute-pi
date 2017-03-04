@@ -15,3 +15,4 @@ time_test_avxunroll
 time_test_baseline
 time_test_openmp_2
 time_test_openmp_4
+time_test_leibniz
