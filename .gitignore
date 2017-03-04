@@ -5,10 +5,13 @@
 *.list
 *.swp
 *.bak
+*.csv
+*.txt
+*.png
+benchmark_clock_gettime_cputime
 benchmark_clock_gettime
 time_test_avx
 time_test_avxunroll
 time_test_baseline
 time_test_openmp_2
 time_test_openmp_4
-result_clock_gettime.csv
